@@ -6,9 +6,17 @@ spring:
     console:
       enabled: true
   datasource:
-    url: jdbc:h2:mem:dcbapp
-    driver-class-name: org.h2.Driver
-    username: sa
-    password: pass
+    url: jdbc:mysql://127.0.0.1:3306/spring-start
+    username: root2
+    password: Basappa123)
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  #    url: jdbc:h2:mem:dcbapp
+#    driver-class-name: org.h2.Driver
+#    username: sa
+#    password: pass
+
   jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    database: mysql
