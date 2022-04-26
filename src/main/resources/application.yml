@@ -2,6 +2,9 @@ server:
   port: 8081
 welcome:
   message: "Hi Momo !"
+app:
+  jwtSecret: "sadfasdf"
+  jwtExpirationMs: "88899"
 spring:
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/spring-start
@@ -16,8 +19,14 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.MySQL8Dialect
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     database: mysql
+    properties:
+      hibernate:
+        format_sql: true
+  h2:
+    console:
+      enabled: off
 management:
   endpoints:
     web:
